@@ -61,6 +61,9 @@ input[type="text"] {
 }
 
 .btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 0.25rem;
   background-color: rgb(180, 180, 180);
@@ -69,6 +72,6 @@ input[type="text"] {
 .btn-box span {
   text-align: center;
   border: none;
-  width: 100%;
+  width: 50%;
   padding: 0.25rem;
 }
