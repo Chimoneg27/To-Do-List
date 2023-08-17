@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Times New Roman', Times, serif;
+  background-color: rgb(218, 221, 223);
+}
+
+.container {
+  background-color: #fff;
+  width: 40%;
+  height: auto;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+
+.title {
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0.65rem;
+  text-align: left;
+  border: 1px solid gray;
+}
+
+.container ul {
+  list-style: none;
+}
+
+#tasks {
+  width: 100%;
+}
+
+.activity {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 60%;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 400;
+  border: none;
+  padding: 0.45rem;
+}
+
+#addInput {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.25rem;
+  background-color: rgb(180, 180, 180);
+}
+
+.btn-box span {
+  text-align: center;
+  border: none;
+  width: 50%;
+  padding: 0.25rem;
+}
