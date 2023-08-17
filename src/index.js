@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import _ from 'lodash';
 import './style.css';
 
 const taskContainer = document.getElementById('tasks');
@@ -22,7 +20,7 @@ const toDoArr = [
   },
 ];
 
-const getTasks = (e) => {
+const getTasks = () => {
   toDoArr.forEach((activity, index) => {
     taskContainer.innerHTML += `
       <li class="activity">
