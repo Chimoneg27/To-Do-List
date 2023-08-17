@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import _ from 'lodash';
 import './style.css';
 
-const taskContainer = document.getElementById('tasks')
+const taskContainer = document.getElementById('tasks');
 
 const toDoArr = [
   {
@@ -18,8 +19,8 @@ const toDoArr = [
     desc: 'Play fifa with Camavinga',
     bool: 'false',
     index: 2,
-  }
-]
+  },
+];
 
 const getTasks = (e) => {
   toDoArr.forEach((activity, index) => {
@@ -31,8 +32,8 @@ const getTasks = (e) => {
         </div>
         <i class="fa-solid fa-ellipsis-vertical fs-3 "></i>
       </li>
-    `
-  })
-}
+    `;
+  });
+};
 
 getTasks();
