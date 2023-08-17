@@ -14,7 +14,6 @@ body {
   width: 40%;
   height: auto;
   margin: 5rem auto;
-  padding: 0.25rem 0 0.25rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,6 +25,7 @@ body {
   width: 100%;
   padding: 0.5rem 0 0.5rem 0.65rem;
   text-align: left;
+  border: 1px solid gray;
 }
 
 .container ul {
@@ -45,9 +45,29 @@ body {
 }
 
 input[type="text"] {
-  border: 1px solid gray;
-  width: 100%;
+  width: 60%;
   font-size: 1.1rem;
   font-style: italic;
   font-weight: 400;
+  border: none;
+}
+
+#addInput {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-box {
+  width: 100%;
+  padding: 0.25rem;
+  background-color: rgb(180, 180, 180);
+}
+
+.btn-box span {
+  text-align: center;
+  border: none;
+  width: 100%;
+  padding: 0.25rem;
 }
