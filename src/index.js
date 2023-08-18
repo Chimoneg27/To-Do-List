@@ -1,8 +1,12 @@
 import './style.css';
+// eslint-disable-next-line import/no-cycle
+import clearAll from './modules/statusUpdates.js';
 
 const form = document.getElementById('todoform');
 const todoInput = document.getElementById('newtodo');
 const toDoListEl = document.getElementById('todos-list');
+const clearCompletedBtn = document.getElementById('clear-completed');
+// eslint-disable-next-line import/no-mutable-exports
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
 let EditTodoId = -1;
 
@@ -17,7 +21,7 @@ const renderTodos = () => {
               style="color : ${todo.color}"
               data-action="check"
               ></i>
-            <p class="" data-action="check">${todo.value}</p>
+            <p class="${todo.completed ? 'checked' : ''}" data-action="check">${todo.value}</p>
             <i class="bi bi-pencil-square" data-action="edit"></i>
             <i class="bi bi-trash" data-action="delete"></i>
         </div>
@@ -120,3 +124,20 @@ toDoListEl.addEventListener('click', (event) => {
       break;
   }
 });
+
+clearCompletedBtn.addEventListener('click', () => {
+  todos = todos.filter((todo) => !todo.completed);
+
+  todos.forEach((todo, index) => {
+    todo.id = index;
+  });
+
+  renderTodos();
+  localStorage.setItem('todos', JSON.stringify(todos));
+});
+
+clearAll();
+
+export {
+  renderTodos, todos,
+};

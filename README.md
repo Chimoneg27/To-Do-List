@@ -39,8 +39,10 @@
 - **[An input field]**
 - **[Dynamically added items with input button]**
 - **[Webpack configuration]**
-- **[More styling]**
 - **[Slight validation]**
+- **[Line through function when radio button is clicked]**
+- **[Clear all button that clears completed tasks]**
+- **[Module folder with clearAll function]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
