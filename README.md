@@ -4,7 +4,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -38,8 +37,10 @@
 
 - **[To do list container]**
 - **[An input field]**
-- **[Dynamically created content]**
+- **[Dynamically added items with input button]**
 - **[Webpack configuration]**
+- **[More styling]**
+- **[Slight validation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,11 +83,10 @@ git clone https://github.com/Chimoneg27/To-Do-List.git
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Active button]**
-- [ ] **[Functioning to do list]**
-- [ ] **[A proper design layout]**
+- [ ] **[Check out feature]**
 - [ ] **[Responsiveness to make it accessible on mobile screens]**
 - [ ] **[A live demo]**
+- [ ] **[Drag drop feature]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
