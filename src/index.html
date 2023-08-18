@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Wbpack Exercise</title>
 </head>
 <body>
     <div class="container">
-        <div class="title">
-            <h2>To Do List App</h2>
+        <header>
+            <div class="header">
+                <h2>To Do List</h2>
+            </div>
+
+            <div class="new-todo">
+                <form id="todoform">
+                    <input type="text" name="newtodo" id="newtodo" placeholder="Add new task">
+                    <button type="submit">
+                        <i class="bi bi-plus-circle-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </header>
+        <div id="todos-list">
         </div>
-        <ul id="tasks">
-            <li id="addInput">
-                <input type="text" id="addTaskToDo" placeholder="Add to your list...">
-                <i class="fa-solid fa-plus fs-3"></i>
-            </li>
-        </ul>
         <div class="btn-box">
             <span id="clear-all">Clear all content</span>
         </div>
     </div>
-
-    <script src="https://kit.fontawesome.com/e23401e35c.js" crossorigin="anonymous"></script>
 </body>
 </html>
