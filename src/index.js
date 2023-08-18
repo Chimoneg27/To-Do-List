@@ -1,4 +1,5 @@
 import './style.css';
+// eslint-disable-next-line import/no-cycle
 import clearAll from './modules/statusUpdates.js';
 
 const form = document.getElementById('todoform');
@@ -138,5 +139,5 @@ clearCompletedBtn.addEventListener('click', () => {
 clearAll();
 
 export {
-  renderTodos, todos, checkTodo, editTodo, deleteTodo,
+  renderTodos, todos,
 };
