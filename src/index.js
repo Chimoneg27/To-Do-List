@@ -13,7 +13,7 @@ const renderTodos = () => {
     toDoListEl.innerHTML += `
         <div class="todo" id="${index}">
             <i 
-              class="bi ${todo.checked ? 'bi-check-circle-fill' : 'bi-circle'}"
+              class="bi ${todo.completed ? 'bi-check-circle-fill' : 'bi-circle'}"
               style="color : ${todo.color}"
               data-action="check"
               ></i>
@@ -27,7 +27,6 @@ const renderTodos = () => {
 
 renderTodos();
 
-// eslint-disable-next-line consistent-return
 const saveTodo = () => {
   const todoValue = todoInput.value;
 
@@ -48,13 +47,16 @@ const saveTodo = () => {
     EditTodoId = -1;
   } else {
     todos.push({
+      id: todos.length,
       value: todoValue,
-      checked: false,
+      completed: false,
       color: 'black',
     });
   }
 
   todoInput.value = '';
+
+  return undefined;
 };
 
 form.addEventListener('submit', (event) => {
@@ -68,7 +70,7 @@ form.addEventListener('submit', (event) => {
 function checkTodo(todoId) {
   todos = todos.map((todo, index) => ({
     ...todo,
-    checked: index === todoId ? !todo.checked : todo.checked,
+    completed: index === todoId ? !todo.completed : todo.completed,
   }));
 
   renderTodos();
@@ -81,8 +83,14 @@ function editTodo(todoId) {
 }
 
 function deleteTodo(todoId) {
-  todos = todos.filter((todo, index) => index !== todoId);
+  todos.splice(todoId, 1);
   EditTodoId = -1;
+  todos.forEach((todo, index) => {
+    if (index >= todoId) {
+      todo.id = index;
+    }
+  });
+
   renderTodos();
   localStorage.setItem('todos', JSON.stringify(todos));
 }
